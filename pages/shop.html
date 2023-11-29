@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiki</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="icon" type="image/svg+xml" href="/styles/images/MainLogo.svg">
+    <script src="/scripts/header-links.js"></script>
+    <script src="/scripts/header-bin.js"></script>
+    <script src="/scripts/shop.js"></script>
+    <script src="/scripts/filtersort.js"></script>
+</head>
+<body>
+    <header id="top" class="header">
+        <div class="container">
+            <nav class="navigation-desktop">
+                <a href="/pages/lending.html">
+                    <figure class="figure-logo">
+                        <img src="/styles/images/MainLogo.svg" alt="Логотип" height="50" width="50">
+                        <figcaption class="figure-logo-description">
+                            Cotiki
+                        </figcaption>
+                    </figure>
+                </a>
+                <ul class="navigation-list">
+                    <li class="navigation-list-item">
+                        <a href="/pages/lending.html" class="navigation-list-link" id="navigation-list-link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="navigation-list-item">
+                        <a href="/pages/blog.html" class="navigation-list-link" id="navigation-list-link">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="navigation-list-item">
+                        <a href="/pages/shop.html" class="navigation-list-link" id="navigation-list-link">
+                            Магазин
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/bin.html" id="navigation-list-link">
+                            <div class="navigation-list-bin"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/registration.html" id="navigation-list-link">
+                            <div class="navigation-list-account"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="navigation-list-bell" id="navigation-list-bell"></div>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation-mobile">
+                <div class="container">
+                    <ul class="navigation-mobile-list">
+                        <a href="/pages/lending.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-home" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Главная
+                            </li>
+                        </a>
+                        <a href="/pages/blog.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-blog" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Блог
+                            </li>
+                        </a>
+                        <a href="/pages/shop.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-shop" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Магазин
+                            </li>
+                        </a>
+                        <a href="/pages/bin.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-bin" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Корзина
+                            </li>
+                        </a>
+                        <a href="/pages/registration.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-account" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Профиль
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section section-catalog">
+            <div class="container">
+                <h2 class="section-header section-catalog-header">
+                    Каталог товаров
+                </h2>
+                <div class="section-catalog-menu">
+                    <div class="catalog-menu-sort-container">
+                        <label class="catalog-menu-label" for="sort">
+                            Сортировать по
+                        </label>
+                        <div class="catalog-menu-select-container">
+                            <select class="catalog-menu-select" id="sort" name="sort">
+                                <option class="catalog-menu-option" value="none">без сортировки</option>
+                                <option class="catalog-menu-option" value="increase">возрастанию цены</option>
+                                <option class="catalog-menu-option" value="decrease">убыванию цены</option>
+                            </select>
+                        </div>
+                    </div>
+                    <fieldset class="catalog-menu-fieldset">
+                        <legend class="catalog-menu-legend">Фильтр по товарам</legend>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="processor" value="processor">
+                            Процессор
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="motherboard" value="motherboard">
+                            Материнская плата
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="ram" value="ram">
+                            Оперативная память
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="videocard" value="videocard">
+                            Видеокарта
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="rom" value="rom">
+                            Жесткий диск
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="power" value="power">
+                            Блок питания
+                        </label>
+                        <label class="catalog-menu-label">
+                            <input class="catalog-menu-checkbox" type="checkbox" name="case" value="case">
+                            Корпус
+                        </label>
+                    </fieldset>
+                    <button class="catalog-menu-button">
+                        Применить
+                    </button>
+                </div>
+                <ol class="section-catalog-list">
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Процессор Intel Core i5-12400F OEM.webp" alt="Процессор" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Процессор Intel Core i5-12400F OEM [LGA 1700, 6 x 2.5 ГГц, L2 - 7.5 МБ, L3 - 18 МБ, 2 х DDR4, DDR5-4800 МГц, TDP 117 Вт]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                15899 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Процессор AMD Ryzen 5 5600X OEM.webp" alt="Процессор" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Процессор AMD Ryzen 5 5600X OEM [AM4, 6 x 3.7 ГГц, L2 - 3 МБ, L3 - 32 МБ, 2 х DDR4-3200 МГц, TDP 65 Вт]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                15499 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Материнская плата ASRock B550M Pro4.webp" alt="Материнская плата" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Материнская плата ASRock B550M Pro4 [AM4, AMD B550, 4xDDR4-3200 МГц, 2xPCI-Ex16, 2xM.2, Micro-ATX]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                11899 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Материнская плата MSI MAG Z690 TOMAHAWK WIFI.webp" alt="Материнская плата" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Материнская плата MSI MAG Z690 TOMAHAWK WIFI [LGA 1700, Intel Z690, 4xDDR5-5600 МГц, 3xPCI-Ex16, 4xM.2, Standard-ATX]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                19799 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Материнская плата GIGABYTE B550M K.webp" alt="Материнская плата" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Материнская плата GIGABYTE B550M K [AM4, AMD B550, 4xDDR4-3200 МГц, 1xPCI-Ex16, 2xM.2, Micro-ATX]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                9499 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Оперативная память Kingston FURY Beast Black 16 ГБ.webp" alt="Оперативная память" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Оперативная память Kingston FURY Beast Black [KF432C16BBK2/16] 16 ГБ [DDR4, 8 ГБx2 шт, 3200 МГц, 16-18-18-36]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                4599 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Оперативная память ADATA XPG GAMMIX D20 16 ГБ.webp" alt="Оперативная память" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Оперативная память ADATA XPG GAMMIX D20 [AX4U32008G16A-DCBK20] 16 ГБ [DDR4, 8 ГБx2 шт, 3200 МГц, 16-20-20]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                3899 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Оперативная память AMD Radeon R9 Gamer Series 32 ГБ.webp" alt="Оперативная память" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Оперативная память AMD Radeon R9 Gamer Series [R9S432G3206U2K] 32 ГБ [DDR4, 16 ГБx2 шт, 3200 МГц, 16-18-18-39]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                6499 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Оперативная память Patriot Viper 3 16 ГБ.webp" alt="Оперативная память" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Оперативная память Patriot Viper 3 [PV316G160C9K] 16 ГБ [DDR3, 8 ГБx2 шт, 1600 МГц, 9-9-9-24]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                3799 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Видеокарта KFA2 GeForce RTX 3060 CORE (LHR).webp" alt="Видеокарта" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Видеокарта KFA2 GeForce RTX 3060 CORE (LHR) [36NOL7MD1VOK] [PCI-E 4.0 12 ГБ GDDR6, 192 бит, DisplayPort x3, HDMI, GPU 1320 МГц]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                31499 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Видеокарта MSI GeForce RTX 4070 VENTUS 3X E OC.webp" alt="Видеокарта" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Видеокарта MSI GeForce RTX 4070 VENTUS 3X E OC [GeForce RTX 4070 VENTUS 3X E 12G OC] [PCI-E 4.0 12 ГБ GDDR6X, 192 бит, DisplayPort x3, HDMI, GPU 1920 МГц]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                73999 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Видеокарта Sapphire AMD Radeon RX 7600 PULSE GAMING OC.webp" alt="Видеокарта" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Видеокарта Sapphire AMD Radeon RX 7600 PULSE GAMING OC [11324-01-20G] [PCI-E 4.0 8 ГБ GDDR6, 128 бит, DisplayPort x3, HDMI, GPU 1720 МГц]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                32999 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/4 ТБ Жесткий диск WD Purple Surveillance.webp" alt="Жесткий диск и SSD" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                4 ТБ Жесткий диск WD Purple Surveillance [WD43PURZ] [SATA III, 6 Гбит/с, 5400 об/мин, кэш память - 256 МБ, RAID Edition]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                10499 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/4 ТБ Жесткий диск WD Blue.webp" alt="Жесткий диск и SSD" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                4 ТБ Жесткий диск WD Blue [WD40EZAZ] [SATA III, 6 Гбит/с, 5400 об/мин, кэш память - 256 МБ]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                8699 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/480 ГБ 2.5 SATA накопитель Kingston A400.webp" alt="Жесткий диск и SSD" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                480 ГБ 2.5" SATA накопитель Kingston A400 [SA400S37/480G] [SATA, чтение - 500 Мбайт/сек, запись - 450 Мбайт/сек, 3D NAND 3 бит TLC]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                3199 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/1000 ГБ 2.5 SATA накопитель Samsung 870 EVO.webp" alt="Жесткий диск и SSD" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                1000 ГБ 2.5" SATA накопитель Samsung 870 EVO [MZ-77E1T0BW/EU] [SATA, чтение - 560 Мбайт/сек, запись - 530 Мбайт/сек, 3D NAND 3 бит MLC (TLC)]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                8999 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Блок питания Cougar STX 700W.webp" alt="Блок питания" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Блок питания Cougar STX 700W [CGR ST-700] [700 Вт, 80+, APFC, 20 + 4 pin, 4+4 pin, 8 pin CPU, 6 SATA, 6+2 pin x2 PCI-E]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                5299 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Блок питания DEEPCOOL PF600.webp" alt="Блок питания" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Блок питания DEEPCOOL PF600 [R-PF600D-HA0B-EU] [600 Вт, 80+, APFC, 20 + 4 pin, 4+4 pin x2 CPU, 6 SATA, 6+2 pin x4 PCI-E]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                4899 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Блок питания MSI MAG A650BN.webp" alt="Блок питания" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Блок питания MSI MAG A650BN [306-7ZP2B19-CE0] [650 Вт, 80+ Bronze, APFC, 20 + 4 pin, 4+4 pin CPU, 5 SATA, 6+2 pin x2 PCI-E]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                4999 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Блок питания MONTECH CENTURY 850.webp" alt="Блок питания" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Блок питания MONTECH CENTURY 850 [CENTURY 850] [850 Вт, 80+ Gold, APFC, 20 + 4 pin, 4+4 pin x2 CPU, 10 SATA, 6+2 pin x6 PCI-E]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                8899 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Корпус Cougar Duoface Pro RGB.webp" alt="Корпус" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Корпус Cougar Duoface Pro RGB [CGR-5AD1B-RGB ] черный [Mid-Tower, E-ATX, Micro-ATX, Mini-ITX, SSI-CEB, USB 2.0 Type-A, USB 3.2 Gen1 Type-A, USB 3.2 Gen2 Type-C, ARGB вентиляторы, 4 x 120 мм]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                8199 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Корпус DEXP DC-201M черный.webp" alt="Корпус" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Корпус DEXP DC-201M черный [Mini-Tower, Micro-ATX, Mini-ITX, USB 2.0 Type-A]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                1599 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                    <li class="catalog-list-item">
+                        <div class="catalog-list-item-flex-container">
+                            <img src="/styles/images/Корпус ZALMAN N4 Rev.1 черный.webp" alt="Корпус" class="catalog-list-item-img">
+                            <p class="catalog-list-item-paragraph section-paragraph">
+                                Корпус ZALMAN N4 Rev.1 черный [Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 2.0 Type-A, USB 3.2 Gen1 Type-A, FRGB вентиляторы, 3 x 120 мм, 3 x 140 мм]
+                            </p>
+                        </div>
+                        <div class="catalog-list-item-price-container">
+                            <p class="catalog-list-item-price">
+                                5399 ₽
+                            </p>
+                            <button class="catalog-list-item-button"></button>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    О нас
+                </h3>
+                <p class="footer-paragraph">
+                    Добро пожаловать в Cotiki – ваш надежный партнер в мире высокотехнологичных компьютерных комплектующих! Наша компания основана на страсти к инновациям и стремлении предоставлять клиентам только лучшие продукты.
+                    Мы гордимся тем, что предлагаем широкий ассортимент высококачественных комплектующих, от процессоров и видеокарт до материнских плат и оперативной памяти. Наша команда экспертов тщательно отбирает продукты, чтобы удовлетворить самые высокие стандарты производительности и надежности.
+                    Присоединяйтесь к нам в социальных сетях:
+                </p>
+                <div class="contacts-icons">
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/telegram.svg" alt="telegram" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/vk.svg" alt="vk" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/viber.svg" alt="viber" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/youtube.svg" alt="youtube" width="30px" height="30px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Быстрые ссылки
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-paragraph">
+                        <a href="/pages/lending.html">Главная</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/blog.html">Блог</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/shop.html">Каталог</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/registration.html">Зарегистрироваться</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/bin.html">Корзина</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Магазин
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-paragraph">
+                        <a href="">Процессоры</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Материнские карты</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Оперативная память</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Жесткие диски</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Видеокарты</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Блоки питания</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Ищите нас
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/location.svg" alt="Местоположение" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">Мичуринский проспект, 12к2, Москва, 119192</a>
+                        </p>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/phone.svg" alt="Телефон" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">+7 964 659-74-49</a><br>
+                            <a href="">+7 964 659-74-49</a>
+                        </p>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/mail.svg" alt="Почта" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">mralexey1@mail.ru</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright-paragraph">
+                Copyright © 2023 student MIREA. All rights reserved
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

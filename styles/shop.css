@@ -1,0 +1,236 @@
+.section-header {
+    text-align: left;
+}
+
+.section-catalog-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.catalog-menu-label {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+}
+
+.catalog-menu-select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.catalog-menu-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.catalog-menu-select-container::after {
+    content: '\25BC';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #555;
+}
+
+.catalog-menu-select-container:hover .catalog-menu-select {
+    border-color: #999;
+}
+
+.catalog-menu-fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-menu-legend {
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+}
+
+.catalog-menu-button {
+    padding: 10px 20px;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    background-color: #ffffff;
+    outline: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.catalog-menu-button:hover {
+    background-color: #e9e9e9;
+}
+
+.catalog-menu-button:active {
+    background-color: #d7d7d7;
+}
+
+.section-catalog-list {
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+}
+
+.catalog-list-item {
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--blurred-white);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.catalog-list-item-flex-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-list-item-img {
+    width: 172px;
+    height: 172px;
+}
+
+.catalog-list-item-paragraph {
+    margin: 10px 0;
+    flex-grow: 2;
+    text-align: center;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+}
+
+.catalog-list-item-price-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-list-item-price {
+    font-size: 20px;
+    font-family: 'Roboto-Medium';
+    color: #fff;
+}
+
+.catalog-list-item-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #ffffffaa;
+    background-image: url("/styles/images/ShopAddItem.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.catalog-list-item-button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px #00000022;
+}
+
+@media (max-width: 768px) {
+    .catalog-menu-sort-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .catalog-menu-label {
+        font-size: 10px;
+    }
+    
+    .catalog-menu-select {
+        padding: 5px;
+        padding-right: 25px;
+        font-family: 'Roboto-Regular';
+        font-size: 10px;
+    }
+    
+    .catalog-menu-select-container::after {
+        font-size: 12px;
+    }
+    
+    .catalog-menu-legend {
+        font-size: 12px;
+    }
+    
+    .catalog-menu-button {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .section-catalog-list {
+        padding: 20px 10px;
+        gap: 10px;
+    }
+    
+    .catalog-list-item {
+        padding: 5px;
+        width: 100px;
+        border-radius: 5px;
+    }
+    
+    .catalog-list-item-flex-container {
+        margin: 5px 0;
+    }
+    
+    .catalog-list-item-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .catalog-list-item-paragraph {
+        margin: 5px 0;
+        font-size: 9px;
+    }
+    
+    .catalog-list-item-price-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .catalog-list-item-price {
+        font-size: 10px;
+    }
+    
+    .catalog-list-item-button {
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 426px) {
+    .section-catalog-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

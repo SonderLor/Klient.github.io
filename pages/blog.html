@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiki</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/blog.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="icon" type="image/svg+xml" href="/styles/images/MainLogo.svg">
+    <script src="/scripts/header-links.js"></script>
+    <script src="/scripts/header-bin.js"></script>
+    <script src="/scripts/blog.js"></script>
+    <script src="/scripts/cards.js"></script>
+    <script src="/scripts/like-toggle.js"></script>
+</head>
+<body>
+    <header id="top" class="header">
+        <div class="container">
+            <nav class="navigation-desktop">
+                <a href="/pages/lending.html">
+                    <figure class="figure-logo">
+                        <img src="/styles/images/MainLogo.svg" alt="Логотип" height="50" width="50">
+                        <figcaption class="figure-logo-description">
+                            Cotiki
+                        </figcaption>
+                    </figure>
+                </a>
+                <ul class="navigation-list">
+                    <li class="navigation-list-item">
+                        <a href="/pages/lending.html" class="navigation-list-link" id="navigation-list-link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="navigation-list-item">
+                        <a href="/pages/blog.html" class="navigation-list-link" id="navigation-list-link">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="navigation-list-item">
+                        <a href="/pages/shop.html" class="navigation-list-link" id="navigation-list-link">
+                            Магазин
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/bin.html" id="navigation-list-link">
+                            <div class="navigation-list-bin"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/registration.html" id="navigation-list-link">
+                            <div class="navigation-list-account"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="navigation-list-bell" id="navigation-list-bell"></div>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navigation-mobile">
+                <div class="container">
+                    <ul class="navigation-mobile-list">
+                        <a href="/pages/lending.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-home" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Главная
+                            </li>
+                        </a>
+                        <a href="/pages/blog.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-blog" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Блог
+                            </li>
+                        </a>
+                        <a href="/pages/shop.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-shop" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Магазин
+                            </li>
+                        </a>
+                        <a href="/pages/bin.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-bin" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Корзина
+                            </li>
+                        </a>
+                        <a href="/pages/registration.html" class="navigation-mobile-list-link">
+                            <div class="navigation-mobile-list-account" id="navigation-mobile-list-img"></div>
+                            <li class="navigation-mobile-list-item">
+                                Профиль
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-blog">
+            <aside class="blog-aside">
+                <div class="blog-aside-burger"></div>
+                <ul class="blog-aside-list">
+                    <a class="blog-aside-list-link" href="#blog-hero" >
+                        <li class="blog-aside-list-item">
+                            Введение
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-processor">
+                        <li class="blog-aside-list-item">
+                            Процессор
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-motherboard">
+                        <li class="blog-aside-list-item">
+                            Материнская плата
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-ram">
+                        <li class="blog-aside-list-item">
+                            Оперативная память
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-gpu">
+                        <li class="blog-aside-list-item">
+                            Видеокарта
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-hdd-ssd">
+                        <li class="blog-aside-list-item">
+                            Жесткий диск
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-psu">
+                        <li class="blog-aside-list-item">
+                            Блок питания
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-case">
+                        <li class="blog-aside-list-item">
+                            Корпус
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-cooling">
+                        <li class="blog-aside-list-item">
+                            Система охлаждения
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-optical-drive">
+                        <li class="blog-aside-list-item">
+                            Оптический привод
+                        </li>
+                    </a>
+                    <a class="blog-aside-list-link" href="#blog-sound-card">
+                        <li class="blog-aside-list-item">
+                            Звуковая карта
+                        </li>
+                    </a>
+                </ul>
+            </aside>
+            <div>
+                <section class="blog-section" id="blog-hero">
+                    <h1 class="blog-header">
+                        Прокачай свой ПК: Путеводитель по миру компьютерных комплектующих!
+                    </h1>
+                    <div class="blog-hero-image"></div>
+                    <p class="blog-paragraph">
+                        Добро пожаловать в увлекательный мир компьютерных технологий! Если вы хотите максимально раскрыть потенциал своего ПК, то вы находитесь в нужном месте. Давайте погрузимся в мир компьютерных комплектующих и узнаем, как создать мощную машину для ваших потребностей.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-processor">
+                    <h1 class="blog-header">
+                        Процессоры: Мозги вашего ПК
+                    </h1>
+                    <div class="blog-processor-image"></div>
+                    <p class="blog-paragraph">
+                        Сердце любого компьютера – процессор. Это устройство, которое выполняет основные вычислительные операции, обрабатывая данные и управляя функциями системы. Давайте ближе познакомимся с этим важным компонентом и его основными характеристиками.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Что такое процессор?
+                    </h2>
+                    <p class="blog-paragraph">
+                        Процессор, также известный как центральный процессор (ЦП), является мозгом компьютера. Это кремниевый чип, который выполняет миллионы инструкций в секунду, обеспечивая выполнение программ и задач.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Структура процессора:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Процессор состоит из нескольких ключевых элементов:
+                    </p>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Ядра:</b> Ядра процессора – это отдельные вычислительные блоки, способные обрабатывать инструкции. Многозадачные процессоры обычно имеют несколько ядер для параллельной обработки задач.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Кэш-память:</b> Кэш-память – это быстрая и маленькая по объему память, находящаяся непосредственно на чипе процессора. Она служит для временного хранения данных, чтобы ускорить доступ к ним.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Управляющее устройство:</b> Эта часть процессора отвечает за управление выполнением инструкций, их декодирование и отправку в соответствующие ядра.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Арифметико-логическое устройство (АЛУ):</b> АЛУ выполняет арифметические и логические операции, такие как сложение, вычитание и сравнение.
+                        </li>
+                    </ol>
+                    <h2 class="blog-subheader">
+                        Основные характеристики процессора:
+                    </h2>   
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Тактовая частота:</b> Измеряется в герцах (ГГц) и представляет собой скорость выполнения инструкций за секунду. Чем выше тактовая частота, тем быстрее процессор.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Количество ядер:</b> Определяет, сколько задач процессор может выполнять параллельно. Многозадачные приложения могут использовать многоядерные процессоры более эффективно.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Кэш-память:</b> Больший объем кэша улучшает быстродействие, поскольку больше данных может быть временно хранено непосредственно на чипе.
+                        </li>
+                    </ol>
+                </section>
+                <section class="blog-section" id="blog-motherboard">
+                    <h1 class="blog-header">
+                        Материнская Плата: Сердце Компьютерной Системы
+                    </h1>
+                    <div class="blog-motherboard-image"></div>
+                    <p class="blog-paragraph">
+                        Материнская плата – это неотъемлемая часть ПК, являющаяся буквально сердцем всей системы. Давайте заглянем в это важное устройство, которое связывает все компоненты вашего компьютера и обеспечивает их взаимодействие.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Что такое материнская плата?
+                    </h2>
+                    <p class="blog-paragraph">
+                        Материнская плата представляет собой основную плату, на которой расположены различные компоненты, необходимые для функционирования компьютера. Она обеспечивает соединение процессора, памяти, видеокарты, устройств хранения данных и других устройств.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Структура материнской платы:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Сокет процессора:</b> Специальный разъем, в который устанавливается процессор. Существуют разные типы сокетов, соответствующих различным моделям процессоров.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Чипсет:</b> Набор микросхем, управляющих обменом данными между различными компонентами материнской платы. Определяет функциональность платы.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Слоты памяти (DIMM):</b> Разъемы для установки оперативной памяти (RAM). Тип и объем поддерживаемой памяти зависят от конкретной модели материнской платы.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>PCI Express (PCIe) слоты:</b> Используются для подключения видеокарт, звуковых карт и других периферийных устройств. Существуют разные версии PCIe с различной пропускной способностью.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Разъемы SATA:</b> Для подключения устройств хранения данных, таких как жесткие диски и SSD.
+                        </li>
+                    </ol>
+                    <h2 class="blog-subheader">
+                        Основные характеристики материнской платы:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Форм-фактор:</b> Размер и форма платы. Разные форм-факторы (ATX, Micro-ATX, Mini-ITX) подходят для разных корпусов.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Расширительные слоты:</b> Количество и тип слотов для установки дополнительных карт расширения, таких как видеокарты.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Звуковая и сетевая подсистемы:</b> Встроенные аудио- и сетевые контроллеры, обеспечивающие звуковую и сетевую функциональность.
+                        </li>
+                    </ol>
+                    <h2 class="blog-subheader">
+                        Выбор и советы:
+                    </h2>
+                    <p class="blog-paragraph">
+                        В наших обзорах мы рассмотрим различные модели материнских плат, выделяя их особенности и предоставляя советы по выбору под конкретные нужды. Независимо от того, строите ли вы игровой ПК или рабочую станцию, мы поможем вам выбрать идеальную материнскую плату для оптимальной производительности.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-ram">
+                    <h1 class="blog-header">
+                        Оперативная Память: Дыхание Вашего ПК
+                    </h1>
+                    <div class="blog-ram-image"></div>
+                    <p class="blog-paragraph">
+                        Оперативная память (RAM) – это животрепещущий элемент вашего компьютера, обеспечивающий мгновенный доступ к данным для активных задач. Давайте погрузимся в мир оперативной памяти и узнаем, как сделать ваш ПК еще более отзывчивым.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Что такое оперативная память?
+                    </h2>
+                    <p class="blog-paragraph">
+                        Оперативная память представляет собой временное хранилище данных, к которым процессор имеет мгновенный доступ. Она используется для хранения запущенных программ, активных процессов и временных данных.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Типы оперативной памяти:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>DRAM (Dynamic Random Access Memory):</b> Один из самых распространенных типов памяти, требующий перезаписи данных через короткие интервалы времени.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>SRAM (Static Random Access Memory):</b> Более быстрая и стабильная по сравнению с DRAM, но более дорогая.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>DDR (Double Data Rate):</b> Семейство стандартов, обеспечивающих более высокую скорость передачи данных по сравнению с предыдущими версиями.
+                        </li>
+                    </ol>
+                    <h2 class="blog-subheader">
+                        Основные характеристики оперативной памяти:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Объем (ГБ):</b> Определяет количество данных, которые память может одновременно содержать. Для современных приложений рекомендуется не менее 8 ГБ.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Тактовая частота (MHz):</b> Измеряется в мегагерцах и определяет скорость передачи данных. Более высокие значения обеспечивают более быстрый доступ к информации.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Тайминги:</b> Характеристики, определяющие задержки при передаче данных. Например, CL (CAS Latency) указывает на время задержки между запросом и выполнением операции.
+                        </li>
+                    </ol>
+                </section>
+                <section class="blog-section" id="blog-gpu">
+                    <h1 class="blog-header">
+                        Видеокарта: Визуальный Двигатель Вашего ПК
+                    </h1>
+                    <div class="blog-videocard-image"></div>
+                    <p class="blog-paragraph">
+                        Видеокарта – это ключевой элемент вашего ПК, обеспечивающий визуальный опыт и обработку графики. Давайте погрузимся в мир видеокарт и узнаем, как создать потрясающее визуальное представление для вашего компьютера.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Что такое видеокарта?
+                    </h2>
+                    <p class="blog-paragraph">
+                        Видеокарта (графический ускоритель) отвечает за обработку графики и отображение изображения на вашем мониторе. Она особенно важна при играх, редактировании видео и 3D-графике.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Типы видеокарт:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Интегрированные видеокарты:</b> Встроены в материнскую плату и обеспечивают базовую графику. Подходят для повседневных задач, но не идеальны для игр или ресурсоемких приложений.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Дискретные видеокарты:</b> Отдельные устройства, которые обеспечивают более высокую производительность. Идеальны для гейминга, профессионального рендеринга и редактирования видео.
+                        </li>
+                    </ol>
+                    <h2 class="blog-subheader">
+                        Основные характеристики видеокарты:
+                    </h2>
+                    <ol class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Графический процессор (GPU):</b> Ядро видеокарты, отвечающее за обработку графических данных.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Объем видеопамяти (VRAM):</b> Определяет, сколько данных видеокарта может одновременно хранить для обработки графики. Важен для игр с высоким разрешением.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Тактовая частота ядра и памяти:</b> Определяет скорость работы видеокарты. Более высокие значения обеспечивают более высокую производительность.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Шина памяти:</b> Ширина канала для передачи данных между графическим процессором и видеопамятью. Влияет на пропускную способность и производительность.
+                        </li>
+                    </ol>
+                </section>
+                <section class="blog-section" id="blog-hdd-ssd">
+                    <h1 class="blog-header">
+                        Жесткий Диск и SSD: Хранилище Вашей Информации
+                    </h1>
+                    <div class="blog-hdd-image"></div>
+                    <p class="blog-paragraph">
+                        Хранение данных – ключевая часть опыта использования ПК. Давайте рассмотрим жесткие диски (HDD) и твердотельные накопители (SSD), чтобы выбрать оптимальное хранилище для ваших потребностей.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Жесткий диск (HDD):
+                    </h2>
+                    <p class="blog-paragraph">
+                        Жесткий диск – классическое устройство для хранения данных. Он использует вращающиеся магнитные диски для чтения и записи информации.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Твердотельный накопитель (SSD):
+                    </h2>
+                    <p class="blog-paragraph">
+                        Твердотельные накопители – современная технология, использующая микросхемы для хранения данных. Они обеспечивают высокую скорость чтения и записи.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Как выбрать между HDD и SSD:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Скорость:</b> SSD обеспечивают значительно более быструю загрузку операционной системы и приложений.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Надежность:</b> Твердотельные накопители обычно более надежны, поскольку они не имеют подвижных частей, подверженных износу.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Объем и цена:</b> HDD предоставляют больший объем хранения за меньшую цену. SSD становятся более доступными, но по прежнему дороже за гигабайт.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Применение:</b> SSD идеальны для операций, требующих высокой скорости, таких как гейминг и редактирование видео. HDD подходят для общего хранения файлов и документов.
+                        </li>
+                    </ul>
+                </section>
+                <section class="blog-section" id="blog-psu">
+                    <h1 class="blog-header">
+                        Блок Питания: Энергия для Вашего ПК
+                    </h1>
+                    <div class="blog-psu-image"></div>
+                    <p class="blog-paragraph">
+                        Блок питания – незаметный, но важный компонент вашего ПК, обеспечивающий энергию для всех других устройств. Давайте рассмотрим, как выбрать правильный блок питания для ваших нужд.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Мощность блока питания:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Мощность блока питания измеряется в ваттах (Вт) и представляет собой общее количество энергии, которое блок может предоставить вашей системе.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Эффективность:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Эффективность блока питания указывается в процентах и представляет собой отношение выходной мощности к потребляемой от сети.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Разъемы и кабели:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Модульные кабели:</b> Позволяют подключать только необходимые кабели, облегчая управление проводами в корпусе.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Разъемы для видеокарты:</b> Удостоверьтесь, что блок питания имеет необходимые разъемы для вашей видеокарты.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Совместимость с материнской платой:</b> Проверьте, соответствует ли блок питания форм-фактору вашей материнской платы.
+                        </li>
+                    </ul>
+                    <h2 class="blog-subheader">
+                        Бренды и надежность:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Выбирайте блок питания от надежных производителей, таких как Corsair, EVGA, Seasonic, чтобы обеспечить стабильное электропитание вашей системе.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-case">
+                    <h1 class="blog-header">
+                        Корпус: Оболочка и Стиль Вашего ПК
+                    </h1>
+                    <div class="blog-case-image"></div>
+                    <p class="blog-paragraph">
+                        Корпус – не просто оболочка для компонентов, но и ключевой элемент дизайна вашего ПК. Рассмотрим, как выбрать корпус, соответствующий вашим потребностям и предпочтениям.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Форм-фактор и Размер:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Форм-фактор корпуса должен соответствовать форм-фактору вашей материнской платы. Размер корпуса также важен, учитывая количество и размер компонентов.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Охлаждение:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Вентиляторы:</b> Убедитесь, что корпус имеет достаточное количество вентиляторов для эффективного охлаждения. Некоторые корпуса поставляются с предустановленными вентиляторами.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Воздушные и водяные системы охлаждения:</b> Рассмотрите возможность установки дополнительных охлаждающих систем для более эффективного теплоотвода.
+                        </li>
+                    </ul>
+                    <h2 class="blog-subheader">
+                        Разъемы и Расширения:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>USB-порты:</b> Проверьте наличие достаточного количества USB-портов на передней и задней панели корпуса.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Расширительные слоты:</b> Убедитесь, что корпус поддерживает необходимое количество расширительных слотов для видеокарт и других карт расширения.
+                        </li>
+                    </ul>
+                    <h2 class="blog-subheader">
+                        Дизайн и Эстетика:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Выберите корпус, соответствующий вашему стилю. Некоторые корпуса имеют прозрачные панели, подсветку или уникальные дизайнерские элементы.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-cooling">
+                    <h1 class="blog-header">
+                        Система Охлаждения: Спокойствие и Производительность
+                    </h1>
+                    <div class="blog-cooling-image"></div>
+                    <p class="blog-paragraph">
+                        Система охлаждения – неотъемлемая часть вашего ПК, обеспечивающая стабильную температуру компонентов и поддерживающая их производительность. Давайте рассмотрим важные аспекты выбора системы охлаждения.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Воздушное охлаждение:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Вентиляторы и радиаторы распределяют воздух по компонентам, избавляясь от тепла. Выбор подходящего воздушного охлаждения зависит от конфигурации вашего корпуса и предпочтений в уровне шума.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Водяное охлаждение:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Водяные системы охлаждения используют циркуляцию жидкости для эффективного охлаждения. Они подходят для пользователей, требующих высокую производительность и низкий уровень шума.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Размеры и Совместимость:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Размер радиатора:</b> Убедитесь, что радиатор системы охлаждения соответствует размерам вашего корпуса.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Совместимость с процессором:</b> Проверьте, поддерживает ли система охлаждения ваш тип процессора и его сокет.
+                        </li>
+                    </ul>
+                    <h2 class="blog-subheader">
+                        Управление вентиляторами:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Некоторые системы охлаждения предлагают возможность программного управления вентиляторами для настройки скорости и шума.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-optical-drive">
+                    <h1 class="blog-header">
+                        Оптический Привод: Устаревшая Технология
+                    </h1>
+                    <div class="blog-optical-image"></div>
+                    <p class="blog-paragraph">
+                        Оптический привод – это устройство для чтения и записи оптических дисков, таких как CD, DVD или Blu-ray. Однако, стоит отметить, что эта технология становится устаревшей в современных ПК, и большинство пользователей обходятся без нее.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Почему оптический привод устарел:
+                    </h2>
+                    <ul class="blog-list">
+                        <li class="blog-paragraph">
+                            <b>Цифровые форматы:</b> С появлением цифровых форматов хранения и передачи данных, таких как USB-флешки и облачные сервисы, оптические диски стали менее популярными.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Увеличение скорости интернета:</b> Быстрый интернет позволяет с легкостью загружать и передавать большие объемы данных в онлайн-режиме, уменьшая потребность в физических носителях.
+                        </li>
+                        <li class="blog-paragraph">
+                            <b>Меньший размер и вес:</b> Современные ноутбуки и корпуса ПК стали более компактными, и удаление оптического привода позволяет сделать устройства более легкими и тонкими.
+                        </li>
+                    </ul>
+                    <p class="blog-paragraph">
+                        В современных сборках ПК оптические приводы используются редко, и большинство пользователей предпочитают другие способы хранения и передачи данных.
+                    </p>
+                </section>
+                <section class="blog-section" id="blog-sound-card">
+                    <h1 class="blog-header">
+                        Звуковая Карта: Актуальность в Современных ПК
+                    </h1>
+                    <div class="blog-soundcard-image"></div>
+                    <p class="blog-paragraph">
+                        Звуковая карта – это устройство, ответственное за обработку аудиосигнала и предоставление звукового опыта. В современных ПК вопрос об актуальности звуковых карт становится все более интересным.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Встроенные звуковые карты:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Большинство материнских плат включают встроенные звуковые карты, способные обеспечивать базовый уровень звукового качества для повседневных задач.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Профессиональные звуковые карты:
+                    </h2>
+                    <p class="blog-paragraph">
+                        Для аудиофилов, музыкантов и профессионалов в области звукозаписи могут потребоваться высококачественные внешние звуковые карты для максимальной точности и четкости звука.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Потребности пользователя:
+                    </h2>
+                    <p class="blog-paragraph">
+                        В повседневных сценариях встроенной звуковой карты может быть достаточно для большинства пользователей. Однако, если вы занимаетесь музыкой или видеомонтажем, вы можете оценить преимущества профессиональных решений.
+                    </p>
+                    <h2 class="blog-subheader">
+                        Технологические изменения:
+                    </h2>
+                    <p class="blog-paragraph">
+                        С развитием технологий и увеличением доступности высококачественных звуковых систем, встроенные звуковые карты вполне могут удовлетворить потребности большинства пользователей.
+                    </p>
+                </section>
+                <div class="blog-repost">
+                    <p class="blog-repost-paragraph">
+                        Поделитесь:
+                    </p>
+                    <a href="">
+                        <div class="blog-repost-vk"></div>
+                    </a>
+                    <a href="">
+                        <div class="blog-repost-tg"></div>
+                    </a>
+                    <a href="">
+                        <div class="blog-repost-ok"></div>
+                    </a>
+                </div>
+                <h1 class="blog-header">Блог</h1>
+                <section class="blog-section-cards">
+                    <div class="blog-section-card">
+                        <div class="blog-section-card-img blog-section-card-img1"></div>
+                        <div class="blog-section-card-userinfo">
+                            <div class="blog-section-card-userinfo-pic"></div>
+                            <div>
+                                <p class="blog-section-card-userinfo-name">
+                                    Админ
+                                </p>
+                                <div class="blog-section-card-userinfo-date">
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        11 дек. 2023 г.
+                                    </p>
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        1 мин.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">
+                            <h3 class="blog-section-card-header">
+                                Что такое скальпирование процессора?
+                            </h3>
+                            <p class="blog-section-card-paragraph">
+                                Основная идея скальпирования заключается в том, что многие процессоры производятся с некоторым запасом производительности, который может быть использован при необходимости. Процессоры различаются по своей работоспособности, и некоторые могут быть успешно скальпированы до более высоких частот без значительного увеличения тепловыделения или других проблем.
+                            </p>
+                        </a>
+                        <div class="blog-section-card-icons">
+                            <div class="blog-section-card-icons-left">
+                                <span class="blog-section-card-icons-eye"></span>
+                                <span class="blog-section-card-icons-comment"></span>
+                            </div>
+                            <span class="blog-section-card-icons-like"></span>
+                        </div>
+                    </div>
+                    <div class="blog-section-card">
+                        <div class="blog-section-card-img blog-section-card-img2"></div>
+                        <div class="blog-section-card-userinfo">
+                            <div class="blog-section-card-userinfo-pic"></div>
+                            <div>
+                                <p class="blog-section-card-userinfo-name">
+                                    Админ
+                                </p>
+                                <div class="blog-section-card-userinfo-date">
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        11 дек. 2023 г.
+                                    </p>
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        1 мин.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">
+                            <h3 class="blog-section-card-header">
+                                Из чего состоит видеокарта
+                            </h3>
+                            <p class="blog-section-card-paragraph">
+                                Дискретная видеокарта — неотъемлемая часть любого компьютера, который используется для игр или профессиональной работы с графикой и видео. Это достаточно сложное устройство, состоящее из нескольких компонентов. Каких именно — расскажем в нашем материале.
+                            </p>
+                        </a>
+                        <div class="blog-section-card-icons">
+                            <div class="blog-section-card-icons-left">
+                                <span class="blog-section-card-icons-eye"></span>
+                                <span class="blog-section-card-icons-comment"></span>
+                            </div>
+                            <span class="blog-section-card-icons-like"></span>
+                        </div>
+                    </div>
+                    <div class="blog-section-card">
+                        <div class="blog-section-card-img blog-section-card-img3"></div>
+                        <div class="blog-section-card-userinfo">
+                            <div class="blog-section-card-userinfo-pic"></div>
+                            <div>
+                                <p class="blog-section-card-userinfo-name">
+                                    Админ
+                                </p>
+                                <div class="blog-section-card-userinfo-date">
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        11 дек. 2023 г.
+                                    </p>
+                                    <p class="blog-section-card-userinfo-date-paragraph">
+                                        1 мин.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">
+                            <h3 class="blog-section-card-header">
+                                ТОП-6 блоков питания на 750 Вт: подборка лучших
+                            </h3>
+                            <p class="blog-section-card-paragraph">
+                                Категория источников питания мощностью 750 ватт представлена в Cotiki наиболее широко — в наличии 59 моделей. Не потеряться в их многообразии поможет эта статья, опирающаяся, в том числе на заслуживающие доверия обзоры.
+                            </p>
+                        </a>
+                        <div class="blog-section-card-icons">
+                            <div class="blog-section-card-icons-left">
+                                <span class="blog-section-card-icons-eye"></span>
+                                <span class="blog-section-card-icons-comment"></span>
+                            </div>
+                            <span class="blog-section-card-icons-like"></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    О нас
+                </h3>
+                <p class="footer-paragraph">
+                    Добро пожаловать в Cotiki – ваш надежный партнер в мире высокотехнологичных компьютерных комплектующих! Наша компания основана на страсти к инновациям и стремлении предоставлять клиентам только лучшие продукты.
+                    Мы гордимся тем, что предлагаем широкий ассортимент высококачественных комплектующих, от процессоров и видеокарт до материнских плат и оперативной памяти. Наша команда экспертов тщательно отбирает продукты, чтобы удовлетворить самые высокие стандарты производительности и надежности.
+                    Присоединяйтесь к нам в социальных сетях:
+                </p>
+                <div class="contacts-icons">
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/telegram.svg" alt="telegram" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/vk.svg" alt="vk" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/viber.svg" alt="viber" width="30px" height="30px">
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="">
+                            <img src="/styles/images/youtube.svg" alt="youtube" width="30px" height="30px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Быстрые ссылки
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-paragraph">
+                        <a href="/pages/lending.html">Главная</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/blog.html">Блог</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/shop.html">Каталог</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/registration.html">Зарегистрироваться</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="/pages/bin.html">Корзина</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Магазин
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-paragraph">
+                        <a href="">Процессоры</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Материнские карты</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Оперативная память</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Жесткие диски</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Видеокарты</a>
+                    </li>
+                    <li class="footer-paragraph">
+                        <a href="">Блоки питания</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item-container">
+                <h3 class="footer-header">
+                    Ищите нас
+                </h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/location.svg" alt="Местоположение" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">Мичуринский проспект, 12к2, Москва, 119192</a>
+                        </p>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/phone.svg" alt="Телефон" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">+7 964 659-74-49</a><br>
+                            <a href="">+7 964 659-74-49</a>
+                        </p>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="">
+                            <img src="/styles/images/mail.svg" alt="Почта" width="20" height="20">
+                        </a>
+                        <p class="footer-paragraph">
+                            <a href="">mralexey1@mail.ru</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright-paragraph">
+                Copyright © 2023 student MIREA. All rights reserved
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

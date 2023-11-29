@@ -1,0 +1,89 @@
+:root {
+    --white: #fff;
+    --blurred-white: #ffffff33;
+    --background: #f7f7f7;
+    --background-aside: #eeeeee;
+    --bright-purple: #923dc3bb;
+    --purple: #9b57c3;
+    --hover-purple: #8c2cc4;
+    --light-red: #FF6B6B;
+    --dark-blue: #05001b;
+    --light-yellow: #fff649;
+}
+
+/* Общие стили */
+
+body, figure, ul, ol, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: var(--background);
+    margin-top: 70px;
+}
+
+aside {
+    background-color: var(--background-aside);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+}
+
+.section-header {
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.section-paragraph {
+    text-align: justify;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+
+@media (max-width: 768px) {
+    .section-header {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 426px) {
+    .section-header {
+        font-size: 20px;
+    }
+}
