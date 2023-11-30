@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const paragraphs = document.querySelectorAll('.blog-section-card-paragraph');
-    const maxLength = 100;
+    let paragraphs = document.querySelectorAll('.blog-section-card-paragraph');
+    let maxLength = 100;
     paragraphs.forEach(paragraph => {
         let originalString = paragraph.innerText;
         paragraph.innerText = truncate(originalString, maxLength);

@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let captcha = generateLettersCaptcha();
     let numbersCaptcha = generateNumbersCaptcha();
-    const captchaContainer = document.getElementById("captcha-container");
-    const captchaInput = document.getElementById("captcha-input");
-    const captchaText = document.getElementById("captcha-text")
-    const submitButton = document.getElementById("submit-button");
-    const captchaButton = document.getElementById("captcha-button");
-    const errorText = document.getElementById("error-text");
+    let captchaContainer = document.getElementById("captcha-container");
+    let captchaInput = document.getElementById("captcha-input");
+    let captchaText = document.getElementById("captcha-text")
+    let submitButton = document.getElementById("submit-button");
+    let captchaButton = document.getElementById("captcha-button");
+    let errorText = document.getElementById("error-text");
 
     captchaText.textContent = "Введите текст: " + captcha;
     submitButton.disabled = true;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function generateLettersCaptcha() {
         let captcha = "";
-        const possibleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        let possibleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         for (let i = 0; i < 5; i++) {
             captcha += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
         }
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function generateNumbersCaptcha() {
-        const num1 = Math.floor(Math.random() * 10);
-        const num2 = Math.floor(Math.random() * 10);
+        let num1 = Math.floor(Math.random() * 10);
+        let num2 = Math.floor(Math.random() * 10);
         return { num1, num2, sum: num1 + num2 };
     }
 

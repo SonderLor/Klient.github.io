@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     function isSelected(itemName) {
-        for (const checkbox of selectedCheckboxes) {
+        for (let checkbox of selectedCheckboxes) {
             let checkboxText = checkbox.parentElement.innerText.toLocaleLowerCase().trim();
             console.log(checkboxText);
             console.log(itemName);
