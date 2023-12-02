@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     let captcha = generateLettersCaptcha();
     let numbersCaptcha = generateNumbersCaptcha();
     let captchaContainer = document.getElementById("captcha-container");
@@ -54,12 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 captchaText.textContent = "";
                 captchaContainer.style.display = "none";
                 errorText.textContent = "Вы прошли проверку. Отправка формы разрешена.";
-            } else {
+            } 
+            else {
                 errorText.textContent = "Неверная капча. Попробуйте снова.";
                 captcha = generateLettersCaptcha();
                 captchaText.textContent = "Введите текст: " + captcha;
             }
-        } else if (!isEmpty(captchaInput.value)) {
+        } 
+        else if (!isEmpty(captchaInput.value)) {
             tries++;
             if (parseInt(captchaInput.value) == numbersCaptcha.sum) {
                 captchaButton.disabled = true;
@@ -69,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 captchaText.textContent = "";
                 captchaContainer.style.display = "none";
                 errorText.textContent = "Вы прошли проверку. Отправка формы разрешена.";
-            } else if (tries == 4) {
+            } 
+            else if (tries == 4) {
                 if (captchaInput.value == captcha) {
                     captchaButton.disabled = true;
                     captchaButton.style.cursor = 'auto';
@@ -82,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 else {
                     captchaText.textContent = `Введите ответ: ${numbersCaptcha.num1} + ${numbersCaptcha.num2} = `;
                 }
-            } else {
+            } 
+            else {
                 errorText.textContent = "Неверная сумма. Попробуйте снова.";
                 numbersCaptcha = generateNumbersCaptcha();
                 captchaText.textContent = `Введите ответ: ${numbersCaptcha.num1} + ${numbersCaptcha.num2} = `;

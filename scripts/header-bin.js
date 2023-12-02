@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-
     async function updateBinAmount() {
         await new Promise(resolve => setTimeout(resolve, 50));
         let amount = 0;
